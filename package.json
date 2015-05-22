@@ -8,7 +8,7 @@
     "watch-src": "watchify -d -o public/app.js index.js",
     "watch-test": "watchify -d -o public/test.js test.js",
     "server": "http-server -p 4004",
-    "watch": "watchify -d -o public/app.js index.js & watchify -d -o public/test.js test.js & http-server -p 4004",
+    "watch": "watchify -d -o public/app.js index.js & watchify -d -o public/test.js test.js & http-server -p 4004"
   },
   "repository": {
     "type": "git",
