@@ -1,24 +1,3 @@
-#Experimenting with javascript quickly and with minimal fuss
-I have started a lot of javascript experiments and projects over the past several years
-and I thought I would write down the steps I follow to quickly get up and running
-with a fun environment to code in.  This general strategy has been employed for:
-
-1. Building webgl demos
-2. Building web components
-3. Building websock based multiplayer game servers
-
-This setup process should take 2-3 minutes roughly (or less on future repetitions).  The goal
-is to avoid complexity and to use the POSIX/Bash environment nearly all of us develop in
-to get off to the races with a highly flexible and composable development setup.  
-
-This setup assumes you wish to use NPM for installing modules and you are comfortable installing
-and bundling them using browserify.  
-
-However, the setup here is so minimal that if you prefer alternative package managers or bundling tools
-it should be very obvious how to substitute them into this configuration with minimal fuss.
-
-NOTE: I will include the bash terminal commands for EVERY step for the sake of clarity and thoroughness.  
-Please don't think I am insulting your intelligence!
 #How to start
 Create a directory for your project and change to it.
 ```bash
@@ -145,14 +124,12 @@ and stopped as background processes.  Note the scripts are separated by a single
 them to be background jobs.
 
 ```json
-{
-  "scripts": {
-    "test": "node test",
-    "watch-src": "watchify -d -o public/app.js index.js",
-    "watch-test": "watchify -d -o public/test.js test.js",
-    "server": "http-server",
-    "watch": "watchify -d -o public/app.js index.js & watchify -d -o public/test.js test.js & http-server",
-  }
+"scripts": {
+  "test": "node test",
+  "watch-src": "watchify -d -o public/app.js index.js",
+  "watch-test": "watchify -d -o public/test.js test.js",
+  "server": "http-server -p 4004",
+  "watch": "watchify -d -o public/app.js index.js & watchify -d -o public/test.js test.js & http-server -p 4004"
 }
 ```
 
