@@ -1,0 +1,37 @@
+{
+  "name": "play",
+  "version": "1.0.0",
+  "description": "This application is a foundation for experimenting with browser applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test",
+    "watch-src": "watchify -d -o public/app.js index.js",
+    "watch-test": "watchify -d -o public/test.js test.js",
+    "server": "http-server",
+    "start": "watchify -d -o public/app.js index.js & watchify -d -o public/test.js test.js & http-server &",
+    "stop": "jobs -x kill" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/stevekane/play.git"
+  },
+  "keywords": [
+    "npm",
+    "bash",
+    "example",
+    "setup",
+    "browserify",
+    "watchify"
+  ],
+  "author": "Steve Kane",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevekane/play/issues"
+  },
+  "homepage": "https://github.com/stevekane/play#readme",
+  "devDependencies": {
+    "http-server": "^0.8.0",
+    "tape": "^4.0.0",
+    "watchify": "^3.2.1"
+  }
+}
