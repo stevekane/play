@@ -64,7 +64,7 @@ Tape is a very minimal test runner available in the node ecosystem.  It is a thi
 protocol) and provides basic testing facilities.  Tape is easily able to handle both sync and async tests without complex
 fanfare and it's generally considered a quality base for node testing.  
 
-There are myriad alternatives to tape.  Some examples include smokestack, mocha, and junit.  Use what you like.
+There are many alternatives to tape including smokestack, mocha, and junit.  Use what you like.
 ```bash
 npm install --save-dev tape
 ```
