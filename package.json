@@ -7,9 +7,8 @@
     "test": "node test",
     "watch-src": "watchify -d -o public/app.js index.js",
     "watch-test": "watchify -d -o public/test.js test.js",
-    "server": "http-server",
-    "start": "watchify -d -o public/app.js index.js & watchify -d -o public/test.js test.js & http-server &",
-    "stop": "jobs -x kill" 
+    "server": "http-server -p 4004",
+    "watch": "watchify -d -o public/app.js index.js & watchify -d -o public/test.js test.js & http-server -p 4004",
   },
   "repository": {
     "type": "git",
@@ -33,5 +32,8 @@
     "http-server": "^0.8.0",
     "tape": "^4.0.0",
     "watchify": "^3.2.1"
+  },
+  "dependencies": {
+    "react": "^0.13.3"
   }
 }

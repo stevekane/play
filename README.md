@@ -136,7 +136,7 @@ watchify -d -o public/test.js test.js
 ```
 We can run our http-server using the following bash script.
 ```bash
-http-server
+http-server -p 4004
 ```
 
 Each of these could be added to the package json as scripts as shown below.
@@ -151,13 +151,12 @@ them to be background jobs.
     "watch-src": "watchify -d -o public/app.js index.js",
     "watch-test": "watchify -d -o public/test.js test.js",
     "server": "http-server",
-    "start": "watchify -d -o public/app.js index.js & watchify -d -o public/test.js test.js & http-server &",
-    "stop": "job -x kill"
+    "watch": "watchify -d -o public/app.js index.js & watchify -d -o public/test.js test.js & http-server",
   }
 }
 ```
 
-We can now start our file watchers for both source and tests and have our http server running as background processes of a single terminal (or tab).  This is somewhat convenient though certainly not necessary.  Once your server and watchers are started, visit your app at localhost:8080/index.html or your tests at localhost:8080/test.html.
+We can now start our file watchers for both source and tests and have our http server running as background processes of a single terminal (or tab).  This is somewhat convenient though certainly not necessary.  Once your server and watchers are started, visit your app at localhost:4004/index.html or your tests at localhost:4004/test.html.
 
 #Fin
 You are now setup with a flexible and minimal browser application development environment.  Feel free
